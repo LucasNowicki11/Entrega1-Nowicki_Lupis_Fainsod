@@ -38,7 +38,7 @@ BASED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-MY_APPS = [
+MY_APPS = ['app_nutricion',
 
 ]
 THIRD_APPS=[
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'Web_Nutricion.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

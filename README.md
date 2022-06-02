@@ -1,1 +1,0 @@
-# Entrega1-Nowicki_Lupis_Fainsod

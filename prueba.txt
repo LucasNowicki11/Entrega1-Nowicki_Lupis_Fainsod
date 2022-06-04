@@ -1,7 +1,0 @@
-probando si se suben los cambios agregados 
-
-rama de leonel creada 3/6
-
-Rama de Manuel, todos los cambios deben incluirse y proarse en esta rama antes de ejecutar el merge desde main.
-
-

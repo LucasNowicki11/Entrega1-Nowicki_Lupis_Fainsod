@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Clientes actuales</h1>
+    {%for cliente in lista_clientes%}
+    <h3>Nombre {{cliente.name}}</h3> 
+    <h3>Apellido {{cliente.last_name}}</h3> 
+    <h4>Fecha de nacimiento {{cliente.birth_date}}</h4>
+    <h5>Edad {{cliente.age}}</h5> 
+    <p>Sexo {{cliente.sexo}}</p> 
+    <h6>Email {{cliente.email}} </h6>
+    {%endfor%}
+</body>
+</html>

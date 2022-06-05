@@ -20,5 +20,5 @@ from Web_Nutricion.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('clientes/', include('app_nutricion.urls')),
-    path('inicio/', index,name='index'),
+    path('', index,name='index'),
 ]

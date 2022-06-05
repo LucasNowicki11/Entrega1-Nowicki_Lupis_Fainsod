@@ -15,3 +15,4 @@
 # Herencia del template base, navbar y bloques de contenido
 
 # Agregado de Cards para clientes y edicion de diseño del card
+# Dropdown de cargar clientes. Formulario proximos commits

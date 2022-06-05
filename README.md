@@ -16,3 +16,4 @@
 
 # Agregado de Cards para clientes y edicion de diseño del card
 # Dropdown de cargar clientes. Formulario proximos commits
+# Evaluacion antropometrica en templates, proximamente modelo y path url

@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Web_Nutricion.views import index 
+from Web_Nutricion.views import index, cargar_clientes
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('clientes/', include('app_nutricion.urls')),
     path('', index,name='index'),
+    path('cargar-clientes/', cargar_clientes, name='cargar_clientes')
+
 ]

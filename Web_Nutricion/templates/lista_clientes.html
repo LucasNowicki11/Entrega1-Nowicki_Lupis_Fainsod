@@ -4,15 +4,19 @@
 Clientes
 {% endblock %}
 
-{% block contenido %}
-<h1>Aqui estan todos los clientes actuales del negocio</h1>
 
-{%for cliente in lista_clientes%}
-<h3>Nombre {{cliente.name}}</h3> 
-<h3>Apellido {{cliente.last_name}}</h3> 
-<h4>Fecha de nacimiento {{cliente.birth_date}}</h4>
-<h5>Edad {{cliente.age}}</h5> 
-<p>Sexo {{cliente.sexo}}</p> 
-<h6>Email {{cliente.email}} </h6>
-{%endfor%}
+
+{% block contenido %}
+<div class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
+{% for cliente in lista_clientes %}
+
+    <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header text-white bg-secondary border-dark">{{cliente.sexo}}</div>
+        <div class="card-body text-white bg-dark border-dark">
+        <h5 class="card-title">{{cliente.name}}, {{cliente.last_name}}</h5>
+        <p class="card-text">{{cliente.birth_date}}. Edad = {{cliente.age}}</p>
+        <p class="card-text">Email:{{cliente.email}} </p>
+        </div>
+    </div>
+{% endfor %}
 {% endblock %}

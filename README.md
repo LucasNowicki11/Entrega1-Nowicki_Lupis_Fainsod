@@ -1,5 +1,7 @@
 # Entrega1-Nowicki_Lupis_Fainsod
 
+# Historial de Cambios:::
+
 
 # Creacion del proyecto
 # Inclusion de .gitignore, readme y requirements
@@ -8,5 +10,6 @@
 # Creacion  de app_nutricion, registro en settings 
 
 # Creacion del primer modelo de la app: Clientes, registro de la url del mismo, de las views, configuracion del panel de admin y primer template clientes/ para ofrecer un display de la lista de clientes actuales.
- # Agregado de template index con navbar
- 
+# Agregado de template index con navbar
+
+# Herencia del template base, navbar y bloques de contenido

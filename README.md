@@ -13,3 +13,5 @@
 # Agregado de template index con navbar
 
 # Herencia del template base, navbar y bloques de contenido
+
+# Agregado de Cards para clientes y edicion de diseño del card

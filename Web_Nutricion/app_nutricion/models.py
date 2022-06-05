@@ -14,7 +14,7 @@ class Clientes(models.Model):
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
 
-class Evaluacion_Antropometrica(models.model):
+class Evaluacion_Antropometrica(models.Model):
     age = models.IntegerField()
     size = models.FloatField()
     weight = models.FloatField()
@@ -23,5 +23,5 @@ class Evaluacion_Antropometrica(models.model):
     caloricvalue = models.FloatField()
 
     class Meta: 
-        verbose_name = "Evaluacion-Antropometrica"
-        verbose_name = "Evaluacion"
+        verbose_name = "Evaluacion Antropometrica"
+        verbose_name_plural = "Evaluaciones"

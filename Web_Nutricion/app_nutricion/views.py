@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app_nutricion.models import Clientes
+from app_nutricion.models import Clientes, Evaluacion_Antropometrica
 # Create your views here.
 
 

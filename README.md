@@ -19,3 +19,4 @@
 # Evaluacion antropometrica en templates, proximamente modelo y path url
 
 # correccion de errores en redireccionado de templates
+# Creacion de formulario para cargar clientes con su respectiva card, y agregado a la lista de clientes. Correccion de errores de redireccion

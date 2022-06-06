@@ -7,4 +7,27 @@
 <br>
 <h1 style = color:rgb(47,75,146)> Aqui podra cargar nuevos clientes</h1>
 
+{% if form %}
+    <form action="" method="POST" >
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit", value="Enviar!">
+    </form>
+{% elif new_client %}
+
+<div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header text-white bg-secondary border-dark">{{new_client.sex}}</div>
+    <div class="card-body text-white bg-dark border-dark">
+    <h5 class="card-title">{{new_client.name}}, {{new_client.last_name}}</h5>
+    <p class="card-text">{{new_client.birth_date}} Edad = {{new_client.age}}</p>
+    <p class="card-text">Email:{{new_client.email}} </p>
+    </div>
+</div>
+
+{% endif %}
+
 {% endblock %}
+
+

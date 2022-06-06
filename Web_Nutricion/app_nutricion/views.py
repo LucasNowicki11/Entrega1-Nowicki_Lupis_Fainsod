@@ -13,4 +13,6 @@ def evaluacion_antropometrica(request):
     context = {"evaluacion_antropometrica": evaluacion_antropometrica}
     return render(request, "evaluacion_antropometrica.html", context=context)
 
+def cargar_clientes(request):
+    return render(request, 'cargar_clientes.html')
     

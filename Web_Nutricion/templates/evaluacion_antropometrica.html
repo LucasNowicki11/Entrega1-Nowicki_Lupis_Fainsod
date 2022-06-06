@@ -3,5 +3,20 @@
 {% block contenido %}
 <br>
 <h1 style = color:rgb(47,75,146)> Aqui se muestran los datos de las evaluaciones antropométricas</h1>
+<div class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
+{% for Evaluacion_Antropometrica in Evaluacion_Antropometrica %}
 
+    <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header text-white bg-secondary border-dark">{{Evaluacion_Antropometrica.name}}</div>
+        <div class="card-body text-white bg-dark border-dark">
+        <p class="card-text">Edad: {{Evaluacion_Antropometrica_age}}</p>
+        <p class="card-text">Talla:{{Evaluacion_Antropometrica.size}} </p>
+        <p class="card-text">Peso:{{Evaluacion_Antropometrica.weight}} </p>
+        <p class="card-text">Grasa Corporal:{{Evaluacion_Antropometrica.bodyfat}} </p>
+        <p class="card-text">Masa Corporal:{{Evaluacion_Antropometrica.musclemass}} </p>
+        <p class="card-text">IMC:{{Evaluacion_Antropometrica.caloricvalue}} </p>
+        </div>
+    </div>
+
+{% endfor %}
 {% endblock %}

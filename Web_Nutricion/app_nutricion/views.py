@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app_nutricion.models import Clientes, Evaluacion_Antropometrica
+from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
 from app_nutricion.forms import Client_form
 # Create your views here.
 
@@ -34,4 +34,7 @@ def cargar_clientes(request):
         return render(request, 'cargar_clientes.html', context=context)
 
 
-
+def recetas(request):
+    recetas = Recetas.objects.all()
+    context = {"recetas": recetas}
+    return render(request, "recetas.html", context=context)

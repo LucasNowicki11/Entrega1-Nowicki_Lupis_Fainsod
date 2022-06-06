@@ -1,3 +1,4 @@
+from unittest.util import _MAX_LENGTH
 from django.db import models
 
 # Create your models here.
@@ -26,3 +27,14 @@ class Evaluacion_Antropometrica(models.Model):
     class Meta: 
         verbose_name = "Evaluacion Antropometrica"
         verbose_name_plural = "Evaluaciones"
+
+class Recetas(models.Model):
+    recipe_name = models.CharField(max_length=40)
+    ingredients = models.CharField(max_length=200)
+    number_of_grams = models.FloatField()
+    amount_of_cholesterol = models.FloatField()
+    vitamins = models.CharField(max_length=300)
+    
+    class Meta: 
+        verbose_name = "Recetas Saludables"
+        verbose_name_plural = "Recetas"

@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('clientes/', include('app_nutricion.urls')),
     path('', index,name='index'),
-    path('cargar-clientes/', cargar_clientes, name='cargar_clientes')
+    path('cargar-clientes/', cargar_clientes, name='cargar_clientes'),
+    path('evaluacion_antropometrica/', include('app_nutricion.urls')),
 
 ]

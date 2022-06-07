@@ -48,7 +48,7 @@ def cargar_evaluacion(request):
                 age = form.cleaned_data['age'],
                 size = form.cleaned_data['size'],
                 weight = form.cleaned_data['weight'],
-                bodyfat = form.cleaned_data['bodyfat '],
+                bodyfat = form.cleaned_data['bodyfat'],
                 musclemass = form.cleaned_data['musclemass'],
                 IMC = form.cleaned_data['IMC'],
             )

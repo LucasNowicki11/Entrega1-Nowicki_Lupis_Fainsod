@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from Web_Nutricion.app_nutricion.forms import Recetas_form
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
 from app_nutricion.forms import Client_form, Evaluacion_form
 
@@ -60,6 +61,25 @@ def recetas(request):
     recetas = Recetas.objects.all()
     context = {"recetas": recetas}
     return render(request, "recetas.html", context=context)
+
+def cargar_receta(request):
+    if request.method == 'GET':
+        form = Recetas_form()
+        context = {'form':form}
+        return render(request, 'cargar_receta.html', context=context)
+    else:
+        form = Recetas_form(request.POST)
+        if form.is_valid():
+            new_evaluacion = Recetas.objects.create(
+                recipe_name = form.cleaned_data['recipe_name'],
+                ingredients = form.cleaned_data['ingredients'],
+                number_of_grams = form.cleaned_data['number_of_grams'],
+                amount_of_cholesterol = form.cleaned_data['amount_of_cholesterol'],
+                vitamins = form.cleaned_data['vitamins'],
+            )
+            context ={'new_recipe':new_recipe}
+        return render(request, 'cargar_receta.html', context=context)
+
 
 
 def search_client_view(request):

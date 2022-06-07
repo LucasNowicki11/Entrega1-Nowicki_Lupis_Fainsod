@@ -16,3 +16,11 @@ class Evaluacion_form(forms.Form):
     bodyfat = forms.FloatField()
     musclemass = forms.FloatField()
     IMC = forms.FloatField()
+
+
+class Recetas(forms.Fodel):
+    recipe_name = forms.CharField(max_length=40)
+    ingredients = forms.CharField(max_length=200)
+    number_of_grams = forms.FloatField()
+    amount_of_cholesterol = forms.FloatField()
+    vitamins = forms.CharField(max_length=300)

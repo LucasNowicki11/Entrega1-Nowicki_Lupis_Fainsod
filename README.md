@@ -22,3 +22,11 @@
 # Creacion de formulario para cargar clientes con su respectiva card, y agregado a la lista de clientes. Correccion de errores de redireccion
 
 # correccion de errores en models, views y template de evaluacion antropometrica que no permitian ver las cards agregadas.
+
+# Creacion del Modelo Evaluacion_Antropometrica
+# Creacion de la Views Evaluacion_Antropometrica
+# Creacion de la Urls de Evaluacion_Antropometrica
+# Creacion del formulario para cargar Evaluacion_Antropometrica
+# Modificacion en admin para que se vean los detalles de los objetos creados
+# Creacion del template cargar_evaluacion.html.
+# Creacion de evualuacion_antropometrica.html.

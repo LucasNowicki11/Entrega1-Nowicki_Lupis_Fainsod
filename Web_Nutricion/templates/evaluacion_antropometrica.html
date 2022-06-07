@@ -4,17 +4,17 @@
 <br>
 <h1 style = color:rgb(47,75,146)> Aqui se muestran los datos de las evaluaciones antropométricas</h1>
 <div class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
-{% for Evaluacion_Antropometrica in Evaluacion_Antropometrica %}
+{% for value in evaluacion_antropometrica %}
 
     <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header text-white bg-secondary border-dark">{{Evaluacion_Antropometrica.name}}</div>
+        <div class="card-header text-white bg-secondary border-dark">{{value.name_evaluacion}}</div>
         <div class="card-body text-white bg-dark border-dark">
-        <p class="card-text">Edad: {{Evaluacion_Antropometrica_age}}</p>
-        <p class="card-text">Talla:{{Evaluacion_Antropometrica.size}} </p>
-        <p class="card-text">Peso:{{Evaluacion_Antropometrica.weight}} </p>
-        <p class="card-text">Grasa Corporal:{{Evaluacion_Antropometrica.bodyfat}} </p>
-        <p class="card-text">Masa Corporal:{{Evaluacion_Antropometrica.musclemass}} </p>
-        <p class="card-text">IMC:{{Evaluacion_Antropometrica.caloricvalue}} </p>
+        <p class="card-text">Edad: {{value.age}}</p>
+        <p class="card-text">Talla:{{value.size}} </p>
+        <p class="card-text">Peso:{{value.weight}} </p>
+        <p class="card-text">Grasa Corporal:{{value.bodyfat}} </p>
+        <p class="card-text">Masa Corporal:{{value.musclemass}} </p>
+        <p class="card-text">IMC:{{value.IMC}} </p>
         </div>
     </div>
 

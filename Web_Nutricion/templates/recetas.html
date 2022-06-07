@@ -2,9 +2,9 @@
 
 {% block contenido %}
 <br>
-<h1 style = color:rgb(47,75,146)> Aqui se muestran las diferentes recetas</h1>
+<h1 style = "color: orange")> Aqui se muestran las diferentes recetas</h1>
 <div class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
-{% for receta in recetas %}
+{% for receta in recetas %} 
 
     <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
         <div class="card-header text-white bg-secondary border-dark">{{receta.recipe_name}}</div>
@@ -12,7 +12,7 @@
         <p class="card-text">recetas: {{receta.recipe_name}}</p>
         <p class="card-text">ingredientes:{{receta.ingredients}} </p>
         <p class="card-text">cantidad de gramos:{{receta.number_of_grams}} </p>
-        <p class="card-text">Cantidad de Colesterol:{{receta.amount_of_Cholesterol}} </p>
+        <p class="card-text">Cantidad de Colesterol:{{receta.amount_of_cholesterol}} </p>
         <p class="card-text">Vitaminas:{{receta.vitamins}} </p>
         </div>
     </div>

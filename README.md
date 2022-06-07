@@ -1,5 +1,10 @@
 # Entrega1-Nowicki_Lupis_Fainsod
-
+# Orden de prueba de las funcionalidades: Las flechas hacen referencia a que se puede hacer todo seguido.
+ # Inicio -->>Clientes -->> Evaluacion antropometrica -->> Recetas (orden indistinto, se puede alternar tranquilamente)
+ # Inicio -->> Cargas --> Cargar clientes 
+ # Inicio -->> Cargas --> Cargar Evaluacion
+ # Inicio -->> Cargas --> Cargar Receta
+ # Boton de search: solo arroja resultados con los nombre de los clientes (solo el nombre no el apellido)
 # Historial de Cambios:::
 
 
@@ -30,3 +35,5 @@
 # Modificacion en admin para que se vean los detalles de los objetos creados
 # Creacion del template cargar_evaluacion.html.
 # Creacion de evualuacion_antropometrica.html.
+
+# Creacion de boton de Buscar Clientes, funciona solo con el nombre de los clientes y arroja las cards correspondientes que posean el mismo nombre.

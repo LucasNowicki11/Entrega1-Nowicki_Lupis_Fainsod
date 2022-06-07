@@ -60,3 +60,11 @@ def recetas(request):
     recetas = Recetas.objects.all()
     context = {"recetas": recetas}
     return render(request, "recetas.html", context=context)
+
+
+def search_client_view(request):
+    print(request.GET)
+    #cliente = Clientes.objects.get()
+    clientes=Clientes.objects.filter(name__icontains= request.GET['search'])
+    context = {'clientes': clientes}
+    return render(request,'search_client.html', context=context)

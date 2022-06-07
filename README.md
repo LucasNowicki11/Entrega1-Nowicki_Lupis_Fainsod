@@ -20,3 +20,5 @@
 
 # correccion de errores en redireccionado de templates
 # Creacion de formulario para cargar clientes con su respectiva card, y agregado a la lista de clientes. Correccion de errores de redireccion
+
+# correccion de errores en models, views y template de evaluacion antropometrica que no permitian ver las cards agregadas.

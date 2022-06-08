@@ -44,4 +44,20 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'Evaluaciones',
             },
         ),
+        migrations.CreateModel(
+            name='Recetas',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('recipe_name', models.CharField(max_length=50)),
+                ('ingredients', models.CharField()),
+                ('number_of_grams', models.FloatField()),
+                ('amount_of_cholesterol', models.FloatField()),
+                ('vitamins', models.CharField()),
+                
+            ],
+            options={
+                'verbose_name': 'Recetas',
+                'verbose_name_plural': 'Recetas',
+            },
+        ),
     ]

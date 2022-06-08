@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from Web_Nutricion.app_nutricion.forms import Recetas_form
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
-from app_nutricion.forms import Client_form, Evaluacion_form
+from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form
 
 # Create your views here.
 
@@ -70,7 +70,7 @@ def cargar_receta(request):
     else:
         form = Recetas_form(request.POST)
         if form.is_valid():
-            new_evaluacion = Recetas.objects.create(
+            new_recipe = Recetas.objects.create(
                 recipe_name = form.cleaned_data['recipe_name'],
                 ingredients = form.cleaned_data['ingredients'],
                 number_of_grams = form.cleaned_data['number_of_grams'],

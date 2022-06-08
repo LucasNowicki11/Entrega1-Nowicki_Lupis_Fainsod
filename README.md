@@ -45,3 +45,6 @@
 # Creacion de recetas.html
 
 # Creacion de boton de Buscar Clientes, funciona solo con el nombre de los clientes y arroja las cards correspondientes que posean el mismo nombre.
+# Creacion de formulario para cargar recetas y correspondiente template.
+
+# Probado segun instruccciones. Hasta aca pre entrega

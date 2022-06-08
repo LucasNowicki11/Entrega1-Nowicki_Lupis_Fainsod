@@ -36,4 +36,12 @@
 # Creacion del template cargar_evaluacion.html.
 # Creacion de evualuacion_antropometrica.html.
 
+# Creacion del Modelo Recetas
+# Creacion de la Views Recetas
+# Creacion de la Urls de Recetas
+# Creacion del formulario para cargar Recetas
+# Modificacion en admin para que se vean los detalles de los objetos creados
+# Creacion del template cargar_recetas.html
+# Creacion de recetas.html
+
 # Creacion de boton de Buscar Clientes, funciona solo con el nombre de los clientes y arroja las cards correspondientes que posean el mismo nombre.

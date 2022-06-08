@@ -1,6 +1,5 @@
 from django.urls import path
-from Web_Nutricion.app_nutricion.views import cargar_receta
-from app_nutricion.views import listar_clientes, evaluacion_antropometrica, cargar_clientes, recetas, cargar_evaluacion, search_client_view
+from app_nutricion.views import listar_clientes, evaluacion_antropometrica, cargar_clientes, cargar_receta, recetas, cargar_evaluacion, search_client_view
 
 urlpatterns = [
     path('',listar_clientes, name='lista_clientes'),

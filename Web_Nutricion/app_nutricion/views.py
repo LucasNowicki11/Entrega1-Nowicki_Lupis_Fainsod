@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from Web_Nutricion.app_nutricion.forms import Recetas_form
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
 from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form
 

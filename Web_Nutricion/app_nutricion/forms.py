@@ -18,7 +18,7 @@ class Evaluacion_form(forms.Form):
     IMC = forms.FloatField()
 
 
-class Recetas_form(forms.Fodel):
+class Recetas_form(forms.Form):
     recipe_name = forms.CharField(max_length=40)
     ingredients = forms.CharField(max_length=200)
     number_of_grams = forms.FloatField()

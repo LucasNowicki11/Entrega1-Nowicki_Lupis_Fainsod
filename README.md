@@ -48,3 +48,6 @@
 # Creacion de formulario para cargar recetas y correspondiente template.
 
 # Probado segun instruccciones. Hasta aca pre entrega
+
+# Creacion de login,register y logout. Resta definir permisos de usuario.
+

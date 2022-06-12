@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Login
+{% endblock %}
+
+{% block contenido %}
+
+
+<h1 style = color:rgb(47,75,146)> Complete los campos para iniciar sesion</h1>
+    <h3>{{errors}}</h3>
+    <form action="" method="POST" style="margin-left:40rem;margin-top:7rem">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit", value="Ingresar">
+    </form>
+
+{% endblock %}
+
+
+

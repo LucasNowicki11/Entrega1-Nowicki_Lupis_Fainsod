@@ -42,9 +42,20 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="cargar-receta/">Cargar Receta</a>
                 <div class="dropdown-divider"></div>
-                        </div>
-            
-        </ul>
+            </div>
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+            <a class="nav-link" href="/logout/" style = color:rgb(190,44,19)>Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+            <a class="nav-link" href="/login/" style = color:rgb(5,138,2)>Login</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/register/" style = color:rgb(181,172,5)>Register</a>
+            </li>
+            {% endif %}
+            </ul>
         <form class="form-inline my-2 my-lg-0" action = "/clientes/search-client/" method = "GET">
             <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search" name = 'search'>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar Clientes</button>

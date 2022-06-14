@@ -7,6 +7,7 @@
 {% for receta in recetas %} 
 
     <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
+        <img src="{{receta.image.url}}" class="card-img-top">
         <div class="card-header text-white bg-secondary border-dark">{{receta.recipe_name}}</div>
         <div class="card-body text-white bg-dark border-dark">
         <p class="card-text">recetas: {{receta.recipe_name}}</p>

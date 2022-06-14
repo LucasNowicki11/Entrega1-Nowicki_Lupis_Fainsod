@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from unittest.util import _MAX_LENGTH
 from django.db import models
 
@@ -12,6 +13,8 @@ class Clientes(models.Model):
     age = models.IntegerField()
     sexo = models.CharField(max_length=20)
     email = models.EmailField(max_length=100)
+    image = models.ImageField(upload_to = "clientes", blank=True, null=True)
+    
 
     class Meta:
         verbose_name = 'Cliente'
@@ -36,6 +39,7 @@ class Recetas(models.Model):
     number_of_grams = models.FloatField()
     amount_of_cholesterol = models.FloatField()
     vitamins = models.CharField(max_length=300)
+    image = models.ImageField(upload_to = "recetas", blank=True, null=True)
     
     class Meta: 
         verbose_name = "Recetas Saludables"

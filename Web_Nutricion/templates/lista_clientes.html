@@ -12,6 +12,7 @@ Clientes
 {% for cliente in lista_clientes %}
 
     <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
+        <img src="{{cliente.image.url}}" class="card-img-top">
         <div class="card-header text-white bg-secondary border-dark">{{cliente.sexo}}</div>
         <div class="card-body text-white bg-dark border-dark">
         <h5 class="card-title">{{cliente.name}}, {{cliente.last_name}}</h5>

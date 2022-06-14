@@ -51,3 +51,9 @@
 
 # Creacion de login,register y logout. Resta definir permisos de usuario.
 
+# Creacion de la App Users
+# Creacion de Modelo User_profile
+# Se registro dicha App
+# Creacion de Carpeta Media
+# Se agrego imagen al Usuario Admin1
+# Se agrego imagenes a los Clientes y a las Recetas.

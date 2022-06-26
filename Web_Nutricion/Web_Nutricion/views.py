@@ -88,3 +88,5 @@ def index(request):
 #    print(request.user.user_profile.phone)
     return render(request, 'index.html')
 
+def about(request):
+    return render (request, 'about.html')

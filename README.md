@@ -60,3 +60,8 @@
 
 # Se agrego campo email al User_profile
 # Se creo usuario Leonellupis como admin y se cargo su imagen
+
+# Se agrego informacion sobre la pagina y sus creadores en about.html
+# Se agrego informacion en creador Leonel Lupis.
+# Se agrego informacion sobre el sitio en index.html
+

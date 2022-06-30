@@ -14,6 +14,7 @@ class Clientes(models.Model):
     sexo = models.CharField(max_length=20)
     email = models.EmailField(max_length=100)
     image = models.ImageField(upload_to = "clientes", blank=True, null=True)
+  
     
 
     class Meta:

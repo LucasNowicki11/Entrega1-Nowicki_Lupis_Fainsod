@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
 from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form
@@ -9,6 +10,19 @@ def listar_clientes(request):
     lista_clientes = Clientes.objects.all()
     context = {'lista_clientes': lista_clientes}
     return render(request, 'lista_clientes.html', context=context)
+
+#desde aca estoy probando#
+
+def detail_cliente(request, pk):
+    try:
+        cliente = Clientes.objects.get(pk=pk)
+        context = {"cliente":cliente}
+        return render(request, "cliente_detail.html", context=context)
+    except:
+        context = {"error": "El Cliente no existe"}
+        return render(request, "lista_clientes.html", context=context)
+
+#desde aca estoy probando#
 
 def cargar_clientes(request):
     if request.method == 'GET':

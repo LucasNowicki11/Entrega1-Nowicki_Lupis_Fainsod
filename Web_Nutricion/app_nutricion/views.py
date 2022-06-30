@@ -11,8 +11,6 @@ def listar_clientes(request):
     context = {'lista_clientes': lista_clientes}
     return render(request, 'lista_clientes.html', context=context)
 
-#desde aca estoy probando#
-
 def detail_cliente(request, pk):
     try:
         cliente = Clientes.objects.get(pk=pk)
@@ -22,7 +20,22 @@ def detail_cliente(request, pk):
         context = {"error": "El Cliente no existe"}
         return render(request, "lista_clientes.html", context=context)
 
-#desde aca estoy probando#
+
+def delete_cliente(request, pk):
+    try:
+        if request.method == "GET":
+            cliente = Clientes.objects.get(pk=pk)
+            context = {"cliente":cliente}
+            return render(request, "delete_cliente.html", context=context)
+        else:
+            cliente = Clientes.objects.get(pk=pk)
+            cliente.delete()
+            context = {"message":"Cliente eliminado correctamente"}           
+            return render(request, "delete_cliente.html", context=context)
+    except:
+        context = {"error": "El Cliente no existe"}
+        return render(request, "delete_cliente.html", context=context)
+
 
 def cargar_clientes(request):
     if request.method == 'GET':

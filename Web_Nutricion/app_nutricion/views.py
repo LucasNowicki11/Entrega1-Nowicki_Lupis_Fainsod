@@ -2,6 +2,7 @@ from multiprocessing import context
 from django.shortcuts import render
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
 from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form
+from django.views.generic import UpdateView
 
 # Create your views here.
 
@@ -35,6 +36,14 @@ def delete_cliente(request, pk):
     except:
         context = {"error": "El Cliente no existe"}
         return render(request, "delete_cliente.html", context=context)
+
+class Update_cliente(UpdateView):
+    model = Clientes
+    template_name = "update_product.html"
+    fields = "__all__"
+
+    def get_success_url(self):
+        return reverse("detail_cliente", kwargs = {"pk":self.object.pk})
 
 
 def cargar_clientes(request):

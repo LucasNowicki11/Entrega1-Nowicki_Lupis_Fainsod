@@ -1,5 +1,5 @@
 from django.urls import path
-from app_nutricion.views import listar_clientes, evaluacion_antropometrica, cargar_clientes, cargar_receta, recetas, cargar_evaluacion, search_client_view, detail_cliente, delete_cliente
+from app_nutricion.views import listar_clientes, evaluacion_antropometrica, cargar_clientes, cargar_receta, recetas, cargar_evaluacion, search_client_view, detail_cliente, delete_cliente, Update_cliente
 
 urlpatterns = [
     path('',listar_clientes, name='lista_clientes'),
@@ -11,4 +11,5 @@ urlpatterns = [
     path('search-client/', search_client_view, name='search_client'),
     path('detail-cliente/<int:pk>/', detail_cliente, name='detail_cliente'),
     path('delete-cliente/<int:pk>/', delete_cliente, name='delete_cliente'),
+    path('update-cliente/<int:pk>/', Update_cliente.as_view(), name='update_cliente'),
 ]

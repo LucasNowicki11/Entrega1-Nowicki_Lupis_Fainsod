@@ -66,3 +66,8 @@
 # Se agrego informacion sobre el sitio en index.html
 
 # Se agrego informacion en about sobre el alumno Manuel Fainsod.
+# Se creo CRUD en Clientes
+# Se creo el cliente_detail.html
+# Se creo el delete_cliente.html
+# Se creo update_cliente.html
+# En el template lista_clientes.html se agrego el boton de VER MAS!

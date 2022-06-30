@@ -65,3 +65,4 @@
 # Se agrego informacion en creador Leonel Lupis.
 # Se agrego informacion sobre el sitio en index.html
 
+# Se agrego informacion en about sobre el alumno Manuel Fainsod.

@@ -14,8 +14,8 @@ class Clientes(models.Model):
     sexo = models.CharField(max_length=20)
     email = models.EmailField(max_length=100)
     image = models.ImageField(upload_to = "clientes", blank=True, null=True)
-  
-    
+
+
 
     class Meta:
         verbose_name = 'Cliente'
@@ -29,7 +29,7 @@ class Evaluacion_Antropometrica(models.Model):
     bodyfat = models.FloatField()
     musclemass = models.FloatField()
     IMC = models.FloatField()
-
+    
     class Meta: 
         verbose_name = "Evaluacion Antropometrica"
         verbose_name_plural = "Evaluaciones"

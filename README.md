@@ -11,65 +11,12 @@
 
 # Historial de pasos realizados por cada Alumno:
 
-# 1) Alumno Lucas Nowicki:
-# Creacion del proyecto
-# Inclusion de .gitignore, readme y requirements
-# Migrate inicial
-# Creacion  de app_nutricion, registro en settings 
-# Creacion del primer modelo de la app: Clientes, registro de la url del mismo, de las views, configuracion del panel de admin y primer template clientes/ para ofrecer un display de la lista de clientes actuales.
-# Agregado de template index con navbar
-# Herencia del template base, navbar y bloques de contenido
-# Agregado de Cards para clientes y edicion de diseño del card
-# Dropdown de cargar clientes. Formulario proximos commits
-# correccion de errores en redireccionado de templates
-# Creacion de formulario para cargar clientes con su respectiva card, y agregado a la lista de clientes. Correccion de errores de redireccion
-# correccion de errores en models, views y template de evaluacion antropometrica que no permitian ver las cards agregadas.
-# Creacion de boton de Buscar Clientes, funciona solo con el nombre de los clientes y arroja las cards correspondientes que posean el mismo nombre.
-# Creacion de formulario para cargar recetas y correspondiente template.
-# Probado segun instruccciones. Hasta aca pre entrega
-# Creacion de login,register y logout. Resta definir permisos de usuario.
+# PYTHON CURSO 36945
+# 1) Alumno Lucas Nowicki: Creación del project/app inicial ‘app_nutricion‘ registro y organizacion de settings/ .gitignore y requirements.md/Model Clientes (con sus respectivas view de listado y cargas) y su form/ Esqueleto y armado estetico de la web en general (bootstrap, html y css)config de cards, navbar, tipografia/Login,Logout,Register/Barra Search para buscar clientes/Herencia de templates/Route ‘About/‘/Corrección de Bugs.
 
 
-
-# 2) Alumno Leonel Lupis:
-# Creacion del Modelo Evaluacion_Antropometrica.
-# Creacion de la Views Evaluacion_Antropometrica.
-# Creacion de la Urls de Evaluacion_Antropometrica.
-# Creacion del formulario para cargar Evaluacion_Antropometrica.
-# Modificacion en admin para que se vean los detalles de los objetos creados. 
-# Creacion del template cargar_evaluacion.html.
-# Creacion de la App Users
-# Creacion de Modelo User_profile
-# Se registro dicha App
-# Creacion de Carpeta Media
-# Se agrego imagen al Usuario Admin1
-# Se agrego imagenes a los Clientes y a las Recetas.
-# Se agrego campo email al User_profile
-# Se creo usuario Leonellupis como admin y se cargo su imagen
-# Se agrego informacion sobre la pagina y sus creadores en about.html
-# Se agrego informacion en creador Leonel Lupis.
-# Se agrego informacion sobre el sitio en index.html
-# Se agrego informacion en about sobre el alumno Manuel Fainsod.
-# Se creo CRUD en Clientes
-# Se creo el cliente_detail.html
-# Se creo el delete_cliente.html
-# Se creo edit_cliente.html
-# En el template lista_clientes.html se agrego el boton de VER MAS!
-# Se creo nuevamente la Carpeta Media ya que se debia sacar de gitignore.
-# Se subieron imagenes a los perfiles
-# Se subieron imagenes a las recetas
-# En requirements.txt se agrego django-crispy-forms y se hizo la instalacion 
-# En settings.py se importo 'crispy_forms'
+# 2) Alumno Leonel Lupis: Model Evaluacion_Antropometrica con sus respectivas views de listado y carga con formulario/CRUD en Panel de Admin/App Users/Carpeta Media/Agregado de imagenes a usuario y clientes,recetas/Info de la pagina/Client detail,edit y delete con codeado de botonera en lista_clientes.html/
 
 
+# 3) Alumno Manuel Fainsond: Model Recetas (con su view de listado y cargas) y su formulario/ 
 
-
-
-# 3) Alumno Manuel Fainsond
-# Creacion del Modelo Recetas
-# Creacion de la Views Recetas
-# Creacion de la Urls de Recetas
-# Creacion del formulario para cargar Recetas
-# Modificacion en admin para que se vean los detalles de los objetos creados
-# Creacion del template cargar_recetas.html
-# Creacion de recetas.html

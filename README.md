@@ -27,7 +27,6 @@
 # Creacion de formulario para cargar clientes con su respectiva card, y agregado a la lista de clientes. Correccion de errores de redireccion
 
 # correccion de errores en models, views y template de evaluacion antropometrica que no permitian ver las cards agregadas.
-
 # Creacion del Modelo Evaluacion_Antropometrica
 # Creacion de la Views Evaluacion_Antropometrica
 # Creacion de la Urls de Evaluacion_Antropometrica
@@ -57,17 +56,17 @@
 # Creacion de Carpeta Media
 # Se agrego imagen al Usuario Admin1
 # Se agrego imagenes a los Clientes y a las Recetas.
-
 # Se agrego campo email al User_profile
 # Se creo usuario Leonellupis como admin y se cargo su imagen
-
 # Se agrego informacion sobre la pagina y sus creadores en about.html
 # Se agrego informacion en creador Leonel Lupis.
 # Se agrego informacion sobre el sitio en index.html
-
 # Se agrego informacion en about sobre el alumno Manuel Fainsod.
 # Se creo CRUD en Clientes
 # Se creo el cliente_detail.html
 # Se creo el delete_cliente.html
 # Se creo update_cliente.html
 # En el template lista_clientes.html se agrego el boton de VER MAS!
+# Se creo nuevamente la Carpeta Media ya que se debia sacar de gitignore.
+# Se subieron imagenes a los perfiles
+# Se subieron imagenes a las recetas

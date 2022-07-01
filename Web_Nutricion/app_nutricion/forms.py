@@ -1,5 +1,5 @@
 from django import forms
-
+from .models import Clientes
 class Client_form(forms.Form):
     name = forms.CharField(max_length=30)
     last_name = forms.CharField(max_length=40)
@@ -24,3 +24,8 @@ class Recetas_form(forms.Form):
     number_of_grams = forms.FloatField()
     amount_of_cholesterol = forms.FloatField()
     vitamins = forms.CharField(max_length=300)
+
+class ClientesForm(forms.ModelForm):
+    class Meta:
+        model = Clientes
+        fields = "__all__"

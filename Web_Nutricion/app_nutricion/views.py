@@ -1,8 +1,7 @@
 from multiprocessing import context
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
-from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form
-from django.views.generic import UpdateView
+from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form, ClientesForm
 
 # Create your views here.
 
@@ -37,13 +36,20 @@ def delete_cliente(request, pk):
         context = {"error": "El Cliente no existe"}
         return render(request, "delete_cliente.html", context=context)
 
-class Update_cliente(UpdateView):
-    model = Clientes
-    template_name = "update_product.html"
-    fields = "__all__"
-
-    def get_success_url(self):
-        return reverse("detail_cliente", kwargs = {"pk":self.object.pk})
+def edit_cliente(request, id):
+    try:
+        if request.method == "GET":
+            cliente = Clientes.objects.get(id=id)
+            context = {"cliente":cliente}
+            return render(request, "edit_cliente.html", context=context)
+        else:
+            cliente = Clientes.objects.get(pk=pk)
+            cliente.edit()
+            context = {"message":"cliente editado correctamente"}           
+            return render(request, "edit_cliente.html", context=context)
+    except:
+        context = {"error": "El Cliente no existe"}
+        return render(request, "edit_cliente.html", context=context)
 
 
 def cargar_clientes(request):

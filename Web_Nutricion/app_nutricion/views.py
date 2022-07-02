@@ -1,6 +1,7 @@
+from urllib import request
 from django.shortcuts import render
-from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
-from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form
+from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas, Avatar
+from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form, Avatar_form
 
 # Create your views here.
 
@@ -87,3 +88,15 @@ def search_client_view(request):
     clientes=Clientes.objects.filter(name__icontains= request.GET['search'])
     context = {'clientes': clientes}
     return render(request,'search_client.html', context=context)
+
+def agregar_avatar(request):
+    if request.method == "POST":
+        miFormulario = Avatar_form(request.POST, request.FILES)
+        if miFormulario.is_valid:             
+            u = user.objets.get(username=request.user)
+            avatar = Avatar (user=u, imagen=miFormulario.cleaned_data["imagen"])
+            avatar.save() 
+        return render(request, "AppCoder/Inicio.html")
+    else:
+        miFormulario= Avatar_form()
+    return render(request, "agregar_avatar.html", {"miFormulario":miFormulario})

@@ -1,18 +1,14 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-Clientes
+Detalle de Cliente
 {% endblock %}
 
 
 
 {% block contenido %}
-<h1 style = color:rgb(6,29,88)> Aqui estan disponibles todos los clientes actuales</h1>
-
-{{message}}
-
+<h1 style = color:rgb(6,29,88)> Aqui estan disponibles los detalles de nuestros clientes</h1>
 <div class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
-{% for cliente in lista_clientes %}
 
     <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
         <img src="{{cliente.image.url}}" class="card-img-top">
@@ -21,9 +17,10 @@ Clientes
         <h5 class="card-title">{{cliente.name}}, {{cliente.last_name}}</h5>
         <p class="card-text">{{cliente.birth_date}}. Edad = {{cliente.age}}</p>
         <p class="card-text">Email:{{cliente.email}} </p>
-        <a href="/clientes/detail-cliente/{{cliente.id}}/" class="btn btn-primary">Ver Mas!</a>
+        <a href="/clientes/edit-cliente/{{cliente.id}}/" class="btn btn-primary">Editar</a>
+        <a href= "/clientes/delete-cliente/{{cliente.id}}/" class="btn btn-danger">Eliminar</a>
+        </div>
         </div>
     </div>
-    
-{% endfor %}
+
 {% endblock %}

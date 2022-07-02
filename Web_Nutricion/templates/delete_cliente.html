@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Borrar Cliente
+{% endblock %}
+
+{% block contenido %} 
+
+{% if cliente %}
+    <h3 style="color:red">Estas por eliminar el Cliente {{cliente.id}}, estas seguro?</h3>
+
+    <form action = "/clientes/delete-cliente/{{cliente.id}}/" method = "POST">
+        {% csrf_token %} 
+        <button class= "btn btn-danger" type= "submit"> Eliminar</button>
+</form>
+{% else %}
+    {{message}}
+{% endif %}
+
+
+{% endblock %}

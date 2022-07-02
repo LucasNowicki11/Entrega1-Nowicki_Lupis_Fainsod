@@ -11,5 +11,5 @@ urlpatterns = [
     path('cargar-evaluacion/',cargar_evaluacion, name='cargar_evaluacion'),
     path('cargar-receta/',cargar_receta, name='cargar_receta'),
     path('search-client/', search_client_view, name='search_client'),
-    path('agregar-avatar/', agregar_avatar, name='agregar_avatar'),
+    path('agregar-avatar/', agregar_avatar, name='agregar avatar'),
 ]

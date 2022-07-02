@@ -6,15 +6,23 @@
 <br>
 <h1 style = color:rgb(47,75,146)> Aqui podra cargar nuevos Avatares</h1>
 
-{% if form %}
-<h2 style="margin-left:30rem">Complete los campos del nuevo cliente</h2>
-    <form action="" method="POST" style="margin-left:40rem;margin-top:7rem" enctype= "multipart/form-data">
+{% if miFormulario %}
+<h2 style="margin-left:30rem">Complete los campos del avatar</h2>
+
+    {% if errors %}
+        {% for key, value in errors %}
+        <div class="alert alert-danger">{{value}}</div>
+        {% endfor %}
+    {% endif %}
+
+    <form action="{% url 'agregar avatar' %}" method="POST" style="margin-left:40rem;margin-top:7rem" enctype= "multipart/form-data">
         {% csrf_token %}
         <table>
-            {{form.as_table}}
+            {{miFormulario.imagen}}
         </table>
         <input type="submit", value="Enviar!">
     </form>
+    <img src="{% if request.user.avatar.imagen %}{{request.user.avatar.imagen.url}}{% endif %}" width="200px" height="200px">
 {% elif new_client %}
 
 <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">

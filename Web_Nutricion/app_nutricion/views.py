@@ -1,5 +1,6 @@
+from unicodedata import name
 from urllib import request
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas, Avatar
 from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form, Avatar_form
 
@@ -10,6 +11,47 @@ def listar_clientes(request):
     lista_clientes = Clientes.objects.all()
     context = {'lista_clientes': lista_clientes}
     return render(request, 'lista_clientes.html', context=context)
+
+def detail_cliente(request, pk):
+    try:
+        cliente = Clientes.objects.get(pk=pk)
+        context = {"cliente":cliente}
+        return render(request, "cliente_detail.html", context=context)
+    except:
+        context = {"error": "El Cliente no existe"}
+        return render(request, "lista_clientes.html", context=context)
+
+
+def delete_cliente(request, pk):
+    try:
+        if request.method == "GET":
+            cliente = Clientes.objects.get(pk=pk)
+            context = {"cliente":cliente}
+            return render(request, "delete_cliente.html", context=context)
+        else:
+            cliente = Clientes.objects.get(pk=pk)
+            cliente.delete()
+            context = {"message":"Cliente eliminado correctamente"}           
+            return render(request, "delete_cliente.html", context=context)
+    except:
+        context = {"error": "El Cliente no existe"}
+        return render(request, "delete_cliente.html", context=context)
+
+def edit_cliente(request, id):
+    try:
+        if request.method == "GET":
+            cliente = Clientes.objects.get(id=id)
+            context = {"cliente":cliente}
+            return render(request, "edit_cliente.html", context=context)
+        else:
+            cliente = Clientes.objects.get(id=id)
+            cliente.edit()
+            context = {"message":"cliente editado correctamente"}           
+            return render(request, "edit_cliente.html", context=context)
+    except:
+        context = {"error": "El Cliente no existe"}
+        return render(request, "edit_cliente.html", context=context)
+
 
 def cargar_clientes(request):
     if request.method == 'GET':
@@ -90,12 +132,23 @@ def search_client_view(request):
     return render(request,'search_client.html', context=context)
 
 def agregar_avatar(request):
+    try:
+        user = Avatar.objects.get(user = request.user)
+    except: 
+        user = Avatar.objects.create(user = request.user)
+            
     if request.method == "POST":
         miFormulario = Avatar_form(request.POST, request.FILES)
-        if miFormulario.is_valid:             
-            avatar = Avatar (user=u, imagen=miFormulario.cleaned_data["imagen"])
-            avatar.save() 
-        return render(request, "AppCoder/Inicio.html")
+        if miFormulario.is_valid(): 
+            print('Hola como andas ') 
+            user.imagen = miFormulario.cleaned_data["imagen"]           
+            user.save() 
+            return redirect("//agregar-avatar")
+        else:
+            errors = miFormulario.errors.items()
+            miFormulario = Avatar_form()
+            context = {'errors':errors, 'miFormulario':miFormulario}
+            return render(request, "agregar_avatar.html", context=context)
     else:
         miFormulario= Avatar_form()
     return render(request, "agregar_avatar.html", {"miFormulario":miFormulario})

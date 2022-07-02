@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
+from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas, Avatar
 # Register your models here.
 
 @admin.register(Clientes)
@@ -13,4 +13,6 @@ class Evaluacion_AntropometricaAdmin(admin.ModelAdmin):
 @admin.register(Recetas)
 class RecetasAdmin(admin.ModelAdmin):
     list_display = ["recipe_name", "ingredients", "number_of_grams"]
+    
+admin.site.register(Avatar)
 

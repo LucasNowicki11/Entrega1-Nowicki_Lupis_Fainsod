@@ -1,6 +1,7 @@
 from distutils.command.upload import upload
 from unittest.util import _MAX_LENGTH
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -12,7 +13,8 @@ class Clientes(models.Model):
     sexo = models.CharField(max_length=20)
     email = models.EmailField(max_length=100)
     image = models.ImageField(upload_to = "clientes", blank=True, null=True)
-    
+
+
 
     class Meta:
         verbose_name = 'Cliente'
@@ -26,7 +28,7 @@ class Evaluacion_Antropometrica(models.Model):
     bodyfat = models.FloatField()
     musclemass = models.FloatField()
     IMC = models.FloatField()
-
+    
     class Meta: 
         verbose_name = "Evaluacion Antropometrica"
         verbose_name_plural = "Evaluaciones"
@@ -44,8 +46,8 @@ class Recetas(models.Model):
         verbose_name_plural = "Recetas"
         
 class Avatar(models.Model):
-    name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=40)
-    birth_date = models.DateField()
-    age = models.IntegerField()
-    sexo = models.CharField(max_length=20)
+    name = models.CharField(max_length=30, null = True, blank = True)
+    last_name = models.CharField(max_length=40, null = True, blank = True)
+    imagen = models.ImageField(upload_to="user", null = True, blank = True)
+    user = models.OneToOneField(User, related_name="avatar", on_delete=models.CASCADE)
+    

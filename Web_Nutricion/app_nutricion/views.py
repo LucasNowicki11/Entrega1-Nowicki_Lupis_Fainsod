@@ -93,7 +93,6 @@ def agregar_avatar(request):
     if request.method == "POST":
         miFormulario = Avatar_form(request.POST, request.FILES)
         if miFormulario.is_valid:             
-            u = user.objets.get(username=request.user)
             avatar = Avatar (user=u, imagen=miFormulario.cleaned_data["imagen"])
             avatar.save() 
         return render(request, "AppCoder/Inicio.html")

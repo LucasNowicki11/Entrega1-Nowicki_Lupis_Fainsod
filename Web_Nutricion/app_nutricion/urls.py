@@ -1,7 +1,11 @@
 from django.urls import path
+<<<<<<< HEAD
 from app_nutricion.views import listar_clientes, evaluacion_antropometrica, cargar_clientes, cargar_receta, recetas, cargar_evaluacion, search_client_view, agregar_avatar
 
 
+=======
+from app_nutricion.views import listar_clientes, evaluacion_antropometrica, cargar_clientes, cargar_receta, recetas, cargar_evaluacion, search_client_view, detail_cliente, delete_cliente, edit_cliente
+>>>>>>> efe9b02260196084cf121fcf55d2913cdbcb9b54
 
 urlpatterns = [
     path('',listar_clientes, name='lista_clientes'),
@@ -11,5 +15,11 @@ urlpatterns = [
     path('cargar-evaluacion/',cargar_evaluacion, name='cargar_evaluacion'),
     path('cargar-receta/',cargar_receta, name='cargar_receta'),
     path('search-client/', search_client_view, name='search_client'),
+<<<<<<< HEAD
     path('agregar-avatar/', agregar_avatar, name='agregar avatar'),
+=======
+    path('detail-cliente/<int:pk>/', detail_cliente, name='detail_cliente'),
+    path('delete-cliente/<int:pk>/', delete_cliente, name='delete_cliente'),
+    path('edit-cliente/<int:id>/', edit_cliente, name='edit_cliente'),
+>>>>>>> efe9b02260196084cf121fcf55d2913cdbcb9b54
 ]

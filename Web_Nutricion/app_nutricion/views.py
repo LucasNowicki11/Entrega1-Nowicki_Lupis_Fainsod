@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 from unicodedata import name
 from urllib import request
 from django.shortcuts import render, redirect
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas, Avatar
 from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form, Avatar_form
+=======
+from multiprocessing import context
+from django.shortcuts import render, get_object_or_404
+from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas
+from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form, ClientesForm
+>>>>>>> efe9b02260196084cf121fcf55d2913cdbcb9b54
 
 # Create your views here.
 
@@ -44,7 +51,11 @@ def edit_cliente(request, id):
             context = {"cliente":cliente}
             return render(request, "edit_cliente.html", context=context)
         else:
+<<<<<<< HEAD
             cliente = Clientes.objects.get(id=id)
+=======
+            cliente = Clientes.objects.get(pk=pk)
+>>>>>>> efe9b02260196084cf121fcf55d2913cdbcb9b54
             cliente.edit()
             context = {"message":"cliente editado correctamente"}           
             return render(request, "edit_cliente.html", context=context)

@@ -2,6 +2,7 @@ from multiprocessing import context
 from django.shortcuts import render, get_object_or_404, redirect
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas, Avatar
 from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form, Avatar_form
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -51,7 +52,7 @@ def edit_cliente(request, id):
         context = {"error": "El Cliente no existe"}
         return render(request, "edit_cliente.html", context=context)
 
-
+@login_required
 def cargar_clientes(request):
     if request.method == 'GET':
         form = Client_form()
@@ -77,7 +78,7 @@ def evaluacion_antropometrica(request):
     context = {"evaluacion_antropometrica": evaluacion_antropometrica}
     return render(request, "evaluacion_antropometrica.html", context=context)
 
-
+@login_required
 def cargar_evaluacion(request):
     if request.method == 'GET':
         form = Evaluacion_form()
@@ -103,6 +104,8 @@ def recetas(request):
     context = {"recetas": recetas}
     return render(request, "recetas.html", context=context)
 
+
+@login_required
 def cargar_receta(request):
     if request.method == 'GET':
         form = Recetas_form()
@@ -130,6 +133,8 @@ def search_client_view(request):
     context = {'clientes': clientes}
     return render(request,'search_client.html', context=context)
 
+
+@login_required
 def agregar_avatar(request):
     try:
         user = Avatar.objects.get(user = request.user)

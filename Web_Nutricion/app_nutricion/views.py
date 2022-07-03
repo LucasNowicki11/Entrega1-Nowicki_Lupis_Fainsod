@@ -1,5 +1,6 @@
 from multiprocessing import context
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from app_nutricion.models import Clientes, Evaluacion_Antropometrica, Recetas, Avatar
 from app_nutricion.forms import Client_form, Evaluacion_form, Recetas_form, Avatar_form
 
@@ -130,6 +131,7 @@ def search_client_view(request):
     context = {'clientes': clientes}
     return render(request,'search_client.html', context=context)
 
+@login_required
 def agregar_avatar(request):
     try:
         user = Avatar.objects.get(user = request.user)
@@ -140,9 +142,16 @@ def agregar_avatar(request):
         miFormulario = Avatar_form(request.POST, request.FILES)
         if miFormulario.is_valid(): 
             print('Hola como andas ') 
-            user.imagen = miFormulario.cleaned_data["imagen"]           
+            if miFormulario.cleaned_data["imagen"]:
+                user.imagen = miFormulario.cleaned_data["imagen"]
+            if miFormulario.cleaned_data["imagen2"]:
+                user.imagen2 = miFormulario.cleaned_data["imagen2"]
+            if miFormulario.cleaned_data["imagen3"]:
+                user.imagen3 = miFormulario.cleaned_data["imagen3"]
+            if miFormulario.cleaned_data["imagen4"]:
+                user.imagen4 = miFormulario.cleaned_data["imagen4"]
             user.save() 
-            return redirect("//agregar-avatar")
+            return redirect("/agregar-avatar")
         else:
             errors = miFormulario.errors.items()
             miFormulario = Avatar_form()

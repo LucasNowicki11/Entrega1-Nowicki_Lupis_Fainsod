@@ -49,5 +49,8 @@ class Avatar(models.Model):
     name = models.CharField(max_length=30, null = True, blank = True)
     last_name = models.CharField(max_length=40, null = True, blank = True)
     imagen = models.ImageField(upload_to="user", null = True, blank = True)
+    imagen2 = models.ImageField(upload_to="user", null = True, blank = True)
+    imagen3 = models.ImageField(upload_to="user", null = True, blank = True)
+    imagen4 = models.ImageField(upload_to="user", null = True, blank = True)
     user = models.OneToOneField(User, related_name="avatar", on_delete=models.CASCADE)
     

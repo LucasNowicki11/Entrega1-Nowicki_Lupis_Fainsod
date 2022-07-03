@@ -1,11 +1,7 @@
 from django import forms
-<<<<<<< HEAD
 from django.contrib.auth.models import User
 from .models import Clientes
 
-=======
-from .models import Clientes
->>>>>>> efe9b02260196084cf121fcf55d2913cdbcb9b54
 class Client_form(forms.Form):
     name = forms.CharField(max_length=30)
     last_name = forms.CharField(max_length=40)
@@ -30,7 +26,6 @@ class Recetas_form(forms.Form):
     number_of_grams = forms.FloatField()
     amount_of_cholesterol = forms.FloatField()
     vitamins = forms.CharField(max_length=300)
-<<<<<<< HEAD
     
 class Avatar_form(forms.ModelForm):
     name = forms.CharField(max_length=30)
@@ -46,10 +41,3 @@ class Avatar_form(forms.ModelForm):
         super(Avatar_form, self).__init__(*args, **kwargs)
         self.fields['last_name'].required = False
         self.fields['imagen'].required = False
-=======
-
-class ClientesForm(forms.ModelForm):
-    class Meta:
-        model = Clientes
-        fields = "__all__"
->>>>>>> efe9b02260196084cf121fcf55d2913cdbcb9b54

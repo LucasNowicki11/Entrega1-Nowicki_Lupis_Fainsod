@@ -18,20 +18,20 @@
     <form action="{% url 'agregar avatar' %}" method="POST" style="margin-left:40rem;margin-top:7rem" enctype= "multipart/form-data">
         {% csrf_token %}
         <table>
-            <div>Imagen 1{{miFormulario.imagen}}</div>
-            <div>Imagen 2{{miFormulario.imagen2}}</div>
-            <div>Imagen 3{{miFormulario.imagen3}}</div>
-            <div>Imagen 4{{miFormulario.imagen4}}</div>
+            <div>Avatar 1{{miFormulario.imagen}}</div>
+            <div>Avatar 2{{miFormulario.imagen2}}</div>
+            <div>Avatar 3{{miFormulario.imagen3}}</div>
+            <div>Avatar 4{{miFormulario.imagen4}}</div>
         </table>
         <input type="submit", value="Enviar!">
     </form>
-    Imagen1
+    Avatar1
     <img src="{% if request.user.avatar.imagen %}{{request.user.avatar.imagen.url}}{% endif %}" width="200px" height="200px">
-    Imagen2
+    Avatar2
     <img src="{% if request.user.avatar.imagen2 %}{{request.user.avatar.imagen2.url}}{% endif %}" width="200px" height="200px">
-    Imagen3
+    Avatar3
     <img src="{% if request.user.avatar.imagen3 %}{{request.user.avatar.imagen3.url}}{% endif %}" width="200px" height="200px">
-    Imagen4
+    Avatar4
     <img src="{% if request.user.avatar.imagen4 %}{{request.user.avatar.imagen4.url}}{% endif %}" width="200px" height="200px">
 {% elif new_client %}
 

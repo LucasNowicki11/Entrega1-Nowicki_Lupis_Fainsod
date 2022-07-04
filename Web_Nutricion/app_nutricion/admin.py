@@ -13,6 +13,3 @@ class Evaluacion_AntropometricaAdmin(admin.ModelAdmin):
 @admin.register(Recetas)
 class RecetasAdmin(admin.ModelAdmin):
     list_display = ["recipe_name", "ingredients", "number_of_grams"]
-    
-admin.site.register(Avatar)
-

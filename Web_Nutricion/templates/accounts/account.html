@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Perfil
+{% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <div class"d-flex my-5">
+        <img src="{% if request.user.perfil.imagen %}{{request.user.perfil.imagen.url}}{% else %}{% endif %}" width="200px" height="200px">
+        <a href="{% url 'borrar imagen' %}">Borrar imagen</a>
+        <div>
+            <div>Usuario: {{ request.user.username}}</div>
+            <div>Nombre: {{ request.user.perfil.nombre }}</div>
+            <div>Apellido: {{ request.user.perfil.apellido }}</div>
+            <div>Telefono: {{ request.user.perfil.telefono }}</div>
+            <div>Pagina web: {{ request.user.perfil.web }}</div>
+            <div>Descripción: {{ request.user.perfil.descripcion }}</div>
+        </div>
+        <a href="/accounts/profile"><button class="btn">Modificar datos</button></a>
+    </div>
+</div>
+{% endblock %}

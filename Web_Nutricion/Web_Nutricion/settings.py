@@ -46,6 +46,7 @@ CRISPY_TEMPLATE_PACK ="bootstrap4"
 MY_APPS = [
     'app_nutricion',
     'users',
+    'accounts',
 ]
 THIRD_APPS=[
 

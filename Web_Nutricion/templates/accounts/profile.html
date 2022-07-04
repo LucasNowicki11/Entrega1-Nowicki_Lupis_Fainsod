@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="container">
+    <div class"d-flex my-5">
+        <h2>Modificar mis datos</h2>
+        <form action="{% url 'cambiar datos' %}" method="POST" style="margin-left:40rem;margin-top:7rem" enctype= "multipart/form-data">
+            {% csrf_token %}
+            {% if errores %}
+                {% for key, value in errores %}
+                <div>{{value}}</div>
+                {% endfor %}
+            {% endif %}
+            <table>
+                <div>Imagen: {{form.imagen}}</div>
+                <div>Nombre: {{form.nombre}}</div>
+                <div>Apellido: {{form.apellido}}</div>
+                <div>Email: {{form.email}}</div>
+                <div>telefono: {{form.telefono}}</div>
+                <div>web: {{form.web}}</div>
+                <div>descripcion: {{form.descripcion}}</div>
+            </table>
+            <button type="submit">Guardar</button>
+        </form>
+        <h2 class="mt-2">Modificar contraseña</h2>
+        <form action="{% url 'cambiar clave' %}" method="POST" style="margin-left:40rem;margin-top:7rem" enctype= "multipart/form-data">
+            {% csrf_token %}
+            {% if passError %}
+                {% for key, value in passError %}
+                <div>eroores {{value}}</div>
+                {% endfor %}
+            {% endif %}
+            <table>
+                <div>Ingresa la nueva clave: {{passwordForm.password1}}</div>
+                <div>Repeti la nueva clave: {{passwordForm.password2}}</div>
+            </table>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

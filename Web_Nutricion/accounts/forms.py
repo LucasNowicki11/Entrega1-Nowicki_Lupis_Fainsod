@@ -1,3 +1,4 @@
+from unicodedata import east_asian_width
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
@@ -26,3 +27,8 @@ class actualizarPerfil(forms.ModelForm):
 class actualizarUsuario(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder':'Ingresa tu contraseña'}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder':'Volve a ingresar tu contraseña'}))
+    
+    class Meta:
+        model = User
+        fields = ['password1', 'password2']
+        help_texts = {k:'' for k in fields}

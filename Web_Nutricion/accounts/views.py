@@ -16,8 +16,6 @@ def cambiar_perfil_view(request):
     except:
         usuario = perfilDeUsuario.objects.create(
             user = request.user,
-            nombre = 'John',
-            apellido = 'Doe',
         )
     if request.method == 'POST':
         form = actualizarPerfil(request.POST, request.FILES)
@@ -70,18 +68,18 @@ def borrar_imagen(request):
 
 @login_required
 def actualizar_contrasenia(request):
-    usuario = perfilDeUsuario.objects.get(user=request.user)
     if request.method == 'POST':
         form = actualizarUsuario(request.POST)
         if form.is_valid():
             username = request.user
             password = form.cleaned_data['password1']
-            username.ser_password(password)
+            username.set_password(password)
             username.save()
             usuario = authenticate(username=username, password=password)
             login(request, usuario)
             return redirect('/accounts')
         else:
+            usuario = perfilDeUsuario.objects.get(user=request.user)
             form = actualizarPerfil(initial={
                 'nombre': usuario.nombre,
                 'apellido': usuario.apellido,
@@ -97,6 +95,7 @@ def actualizar_contrasenia(request):
             context = {'passError':passError, 'form':form, 'passwordForm':passwordForm}
             return render(request, 'accounts/profile.html', context=context)
     else:
+        usuario = perfilDeUsuario.objects.get(user=request.user)
         form = actualizarPerfil(initial={
         'nombre': usuario.nombre,
         'apellido': usuario.apellido,

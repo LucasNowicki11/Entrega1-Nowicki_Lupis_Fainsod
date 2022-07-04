@@ -17,5 +17,5 @@
 # 2) Alumno Leonel Lupis: Model Evaluacion_Antropometrica con sus respectivas views de listado y carga con formulario/CRUD en Panel de Admin/App Users/Carpeta Media/Agregado de imagenes a usuario y clientes,recetas/Info de la pagina/Client detail,edit y delete con codeado de botonera en lista_clientes.html/
 
 
-# 3) Alumno Manuel Fainsond: Model Recetas (con su view de listado y cargas) y su formulario/ Generación de Avatares / diseño general
+# 3) Alumno Manuel Fainsod: Model Recetas (con su view de listado y cargas) y su formulario/ Generación de Avatares / diseño general / Creación de App registro de usuarios / App login / App de perfiles en el route accounts
 

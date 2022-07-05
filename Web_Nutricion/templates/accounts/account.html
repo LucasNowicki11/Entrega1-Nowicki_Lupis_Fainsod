@@ -8,7 +8,7 @@ Perfil
 <div class="container">
     <div class"d-flex my-5">
         <img src="{% if request.user.perfil.imagen %}{{request.user.perfil.imagen.url}}{% else %}{% endif %}" width="200px" height="200px">
-        <a href="{% url 'borrar imagen' %}">Borrar imagen</a>
+        <a href="{% url 'borrar imagen' %}" button class="btn btn-outline-danger my-3 my-sm-2">Borrar imagen</a>
         <div>
             <div>Usuario: {{ request.user.username}}</div>
             <div>Nombre: {{ request.user.perfil.nombre }}</div>
@@ -17,7 +17,7 @@ Perfil
             <div>Pagina web: {{ request.user.perfil.web }}</div>
             <div>Descripción: {{ request.user.perfil.descripcion }}</div>
         </div>
-        <a href="/accounts/profile"><button class="btn">Modificar datos</button></a>
+        <a href="/accounts/profile"><button class="btn btn-outline-primary my-3 my-sm-2">Modificar datos</button></a>
     </div>
 </div>
 {% endblock %}

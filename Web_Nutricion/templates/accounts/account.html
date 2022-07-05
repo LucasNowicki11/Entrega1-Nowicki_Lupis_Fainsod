@@ -5,7 +5,7 @@ Perfil
 {% endblock %}
 
 {% block contenido %}
-<div class="container">
+<div align = "center" style="margin-top:5rem" class="container">
     <div class"d-flex my-5">
         <img src="{% if request.user.perfil.imagen %}{{request.user.perfil.imagen.url}}{% else %}{% endif %}" width="200px" height="200px">
         <a href="{% url 'borrar imagen' %}" button class="btn btn-outline-danger my-3 my-sm-2">Borrar imagen</a>

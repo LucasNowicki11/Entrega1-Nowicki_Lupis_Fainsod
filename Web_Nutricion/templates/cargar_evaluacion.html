@@ -5,11 +5,11 @@
 
 {% block contenido %}
 <br>
-<h1 style = color:rgb(47,75,146)> Aqui podra cargar nuevas evaluaciones</h1>
+<h1 align = "center" style = color:rgb(47,75,146)> Aqui podra cargar nuevas evaluaciones</h1>
 
 
 {% if form %}
-<h2 style="margin-left:30rem">Complete los datos de la evaluación antropométrica</h2>
+<h2 align = "center">Complete los datos de la evaluación antropométrica</h2>
     <form action="" method="POST" style="margin-left:40rem;margin-top:7rem" enctype= "multipart/form-data">
         {% csrf_token %}
         <table>

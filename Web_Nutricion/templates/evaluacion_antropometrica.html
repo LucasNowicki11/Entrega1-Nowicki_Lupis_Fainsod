@@ -2,19 +2,20 @@
 
 {% block contenido %}
 <br>
-<h1 style = color:rgb(47,75,146)> Aqui se muestran los datos de las evaluaciones antropométricas</h1>
-<div class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
+<h1 align = "center" style="margin-top:2rem" style = color:rgb(47,75,146)> Aqui se muestran los datos de las evaluaciones antropométricas</h1>
+<HR noshade size="8" width="60%" align="center">
+<div align = "center" style="margin-left:30rem;margin-top:2rem" class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
 {% for value in evaluacion_antropometrica %}
 
-    <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
+    <div class="card text-dark border-dark mb-3" style="margin-left:30rem;margin-top:2rem;max-width: 18rem;">
         <div class="card-header text-white bg-secondary border-dark">{{value.name_evaluacion}}</div>
         <div class="card-body text-white bg-dark border-dark">
-        <p class="card-text">Edad: {{value.age}}</p>
-        <p class="card-text">Talla:{{value.size}} </p>
-        <p class="card-text">Peso:{{value.weight}} </p>
-        <p class="card-text">Grasa Corporal:{{value.bodyfat}} </p>
-        <p class="card-text">Masa Corporal:{{value.musclemass}} </p>
-        <p class="card-text">IMC:{{value.IMC}} </p>
+        <p align = "justify" class="card-text">Edad: {{value.age}}</p>
+        <p align = "justify" class="card-text">Talla:{{value.size}} </p>
+        <p align = "justify" class="card-text">Peso:{{value.weight}} </p>
+        <p align = "justify" class="card-text">Grasa Corporal:{{value.bodyfat}} </p>
+        <p  align = "justify"class="card-text">Masa Corporal:{{value.musclemass}} </p>
+        <p align = "justify" class="card-text">IMC:{{value.IMC}} </p>
         </div>
     </div>
 

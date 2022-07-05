@@ -7,23 +7,27 @@ Clientes
 
 
 {% block contenido %}
-<h1 style = color:rgb(6,29,88)> Aqui estan disponibles todos los clientes actuales</h1>
-
+<h1 align = "center" style="margin-top:2rem" style = color:rgb(6,29,88)> Aqui estan disponibles todos los clientes actuales</h1>
+<HR noshade size="8" width="60%" align="center">
 {{message}}
 
-<div class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
+<div align = "center" style="margin-left:30rem;margin-top:2rem" class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
 {% for cliente in lista_clientes %}
 
-    <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
+    <div  class="card text-dark border-dark mb-3" style="margin-left:30rem;margin-top:2rem;max-width: 25rem;">
         <img src="{{cliente.image.url}}" class="card-img-top">
-        <div class="card-header text-white bg-secondary border-dark">{{cliente.sexo}}</div>
+        <div align = "justify" class="card-header text-white bg-secondary border-dark">{{cliente.sexo}}</div>
         <div class="card-body text-white bg-dark border-dark">
-        <h5 class="card-title">{{cliente.name}}, {{cliente.last_name}}</h5>
-        <p class="card-text">{{cliente.birth_date}}. Edad = {{cliente.age}}</p>
-        <p class="card-text">Email:{{cliente.email}} </p>
-        <a href="/clientes/detail-cliente/{{cliente.id}}/" class="btn btn-primary">Ver Mas!</a>
+        <h5 align = "justify" class="card-title">{{cliente.name}}, {{cliente.last_name}}</h5>
+        <p align = "justify" class="card-text">{{cliente.birth_date}}. Edad = {{cliente.age}}</p>
+        <p align = "justify" class="card-text">Email:{{cliente.email}} </p>
+        <a align = "center" href="/clientes/detail-cliente/{{cliente.id}}/" class="btn btn-primary">Ver Mas!</a>
         </div>
     </div>
     
 {% endfor %}
 {% endblock %}
+
+
+
+class="card-deck"

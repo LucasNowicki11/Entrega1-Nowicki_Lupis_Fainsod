@@ -2,19 +2,19 @@
 
 {% block contenido %}
 <br>
-<h1 style = "color: orange")> Aqui se muestran las diferentes recetas</h1>
-<div class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
+<h1 align = "center" style="margin-top:2rem" style = "color: orange")> Aqui se muestran las diferentes recetas</h1>
+<HR noshade size="8" width="60%" align="center">
+<div align = "center" style="margin-left:30rem;margin-top:2rem" class="d-flex" style="margin-top:5rem; margin-left:7rem"></div>
 {% for receta in recetas %} 
 
-    <div class="card text-dark border-dark mb-3" style="max-width: 18rem;">
+    <div class="card text-dark border-dark mb-3" style="margin-left:30rem;margin-top:2rem;max-width: 30rem;">
         <img src="{{receta.image.url}}" class="card-img-top">
         <div class="card-header text-white bg-secondary border-dark">{{receta.recipe_name}}</div>
         <div class="card-body text-white bg-dark border-dark">
-        <p class="card-text">recetas: {{receta.recipe_name}}</p>
-        <p class="card-text">ingredientes:{{receta.ingredients}} </p>
-        <p class="card-text">cantidad de gramos:{{receta.number_of_grams}} </p>
-        <p class="card-text">Cantidad de Colesterol:{{receta.amount_of_cholesterol}} </p>
-        <p class="card-text">Vitaminas:{{receta.vitamins}} </p>
+        <p align = "justify" class="card-text">Ingredientes:{{receta.ingredients}} </p>
+        <p align = "justify" class="card-text">Cantidad de gramos:{{receta.number_of_grams}} </p>
+        <p align = "justify" class="card-text">Cantidad de Colesterol:{{receta.amount_of_cholesterol}} </p>
+        <p align = "justify" class="card-text">Vitaminas:{{receta.vitamins}} </p>
         </div>
     </div>
 
